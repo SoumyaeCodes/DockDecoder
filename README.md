@@ -25,8 +25,9 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. 
-To securely store your API keys and other sensitive information, you should create a `.env` file. Follow these steps:
+### 3. Storing API keys
+To securely store your API keys and other sensitive information, you should create a `.env` file. 
+Follow these steps:
 
 ```bash
 # In the root directory of your project, create a new file named `.env`:
