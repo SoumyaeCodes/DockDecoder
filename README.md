@@ -25,4 +25,17 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### 3. 
+To securely store your API keys and other sensitive information, you should create a `.env` file. Follow these steps:
+
+```bash
+# In the root directory of your project, create a new file named `.env`:
+touch .env
+```
+```bash
+#Open the `.env` file in your favorite text editor and add your API keys in the following format:
+GROQ_API_KEY=<your-api-key-here>
+```
+
+
 With these steps, you’re well-equipped to embark on your coding journey!
