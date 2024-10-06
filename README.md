@@ -1,6 +1,8 @@
 # DockDecoder
-A basic end-to-end ML-based pipeline project for generating summaries from a given PDF document. \n
-Link: https://dockdecoder.streamlit.app/
+A basic end-to-end ML-based pipeline project for generating summaries from a given PDF document. 
+
+### Link
+https://dockdecoder.streamlit.app/
 
 ## Setting Up Your Development Environment
 For an efficient development experience, please follow these two essential steps:
