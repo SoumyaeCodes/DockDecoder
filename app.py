@@ -1,9 +1,9 @@
 from langchain_groq import ChatGroq 
 from langchain_core.documents import Document
-from langchain_community.vectorstores import FAISS #vectorStore DB
+from langchain_community.vectorstores import FAISS 
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_community.document_loaders import PyPDFLoader
-from langchain_google_genai import GoogleGenerativeAIEmbeddings #vector embedding technique
+from langchain_google_genai import GoogleGenerativeAIEmbeddings 
 from langchain_text_splitters import RecursiveCharacterTextSplitter 
 from langchain.chains.combine_documents import create_stuff_documents_chain
 
@@ -46,10 +46,6 @@ Output: Provide the summary in a clear and organized format.
 <context>
 """
 )
-
-# Length: Keep the summary brief, ideally within 4-9 sentences. Remove this line to get bigger summary
-
-
 
 def is_section_title(text):
     stripped_text = text.strip()
@@ -117,59 +113,3 @@ if st.button("Upload"):
             st.write(sections[i])
             st.write(response)
             st.divider()
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def vector_embedding(uploaded_file):
-#     if "vectors" not in st.session_state:
-#         if uploaded_file:
-#             temppdf=f"temp.pdf"
-#             with open(temppdf,"wb") as file:
-#                 file.write(uploaded_file.getvalue())
-#                 file_name=uploaded_file.name
-
-#         st.session_state.embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
-#         st.session_state.loader = PyPDFLoader(temppdf)
-#         st.session_state.docs = st.session_state.loader.load()
-#         st.session_state.text_splitter = RecursiveCharacterTextSplitter(chunk_size=5000, chunk_overlap=500)
-#         st.session_state.final_documents = st.session_state.text_splitter.split_documents(st.session_state.docs)
-#         st.session_state.vectors = FAISS.from_documents(st.session_state.final_documents, st.session_state.embeddings)
-
-
-# if st.button("Upload"):
-#     vector_embedding(uploaded_file)
-#     docs =[]
-#     for doc in st.session_state.final_documents:
-#         docs.append(doc)
-#     document_chain = create_stuff_documents_chain(llm, Prompt)
-#     start = time.process_time()
-#     response = document_chain.invoke({"context": docs})
-#     st.write(response)
-
-
-#     os.remove("temp.pdf")
-
-
-
-
-
-
-
